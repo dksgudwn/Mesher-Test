@@ -28,11 +28,157 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-holder{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #61dafb;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.token-button{
+  background-color: red;
+  border: #b5b5c3;
+  border-radius: 15px;
+  padding: 10px 10px;
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.swap-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Swap Container */
+.swap-container {
+  background-color: #1e1e2f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Input fields for amounts */
+.amount-input {
+  width: 80%;
+  padding: 10px;
+  background-color: #2c2c3b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.amount-input::placeholder {
+  color: #b5b5c3;
+}
+
+/* Token Select Dropdown */
+.token-select {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c2c3b;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* Swap Button */
+.swap-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c2c3b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  cursor: not-allowed;
+  text-align: center;
+} 
+
+.swap-button.enabled{
+  background-color: #4caf50;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.swap-button.enabled:hover {
+  background-color: #45a049;
+}
+
+/* Center alignment for arrow */
+.swap-arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.settings-button{
+  background:none;
+  font: size 24px;
+  cursor: pointer;
+  color:white;
+}
+
+/* 모달 오버레이: 모달이 활성화될 때 뒤 배경을 어둡게 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* 반투명 검정 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* 높은 z-index로 상위 레이어에 표시 */
+}
+
+/* 모달 컨텐츠 스타일 */
+.modal-content {
+  background-color: #2c2c3e; /* 어두운 배경 */
+  padding: 20px;
+  border-radius: 12px; /* 둥근 모서리 */
+  width: 400px; /* 고정 너비 */
+  color: white; /* 흰색 텍스트 */
+}
+
+/* 모달 헤더: 검색 필드와 닫기 버튼 */
+.modal-header {
+  display: flex;
+  justify-content: space-between; /* 양 끝에 요소 배치 */
+  margin-bottom: 15px;
+}
+
+/* 모달 내 검색 입력 필드 */
+.modal-header.input {
+  width: 90%; /* 검색창 너비 */
+  padding: 10px;
+  background-color: #1e1e2f; /* 어두운 배경 */
+  border: none;
+  border-radius: 8px; /* 둥근 모서리 */
+  color: white;
+  font-size: 18px;
+}
+
+/* 모달 닫기 버튼 */
+.modal-header.button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer; /* 클릭 가능 */
 }
